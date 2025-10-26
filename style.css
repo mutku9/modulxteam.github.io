@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+/* Video arka plan */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Loading ekranı */
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.loading-text {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+/* Ana içerik */
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ModulX logosu en yukarı sola */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 150px;
+}
+
+/* Türk bayrağı en üst ortada */
+.flag {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+}
+
+/* Sponsor logosu sağ üst */
+.sponsor {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 200px;
+}
+
+/* Aramızda Katılanlar tam ortada */
+.members {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 20px 40px;
+  border-radius: 15px;
+}
+
+.members h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff004c;
+}
+
+.members ul {
+  list-style: none;
+}
+
+.members li {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+/* Takip Et butonu en altta ortalı */
+.follow-button {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff004c;
+  color: white;
+  border: none;
+  padding: 20px 60px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(255, 0, 76, 0.6);
+}
+
+.follow-button:hover {
+  background-color: #ff3370;
+  box-shadow: 0 0 30px rgba(255, 0, 76, 0.8);
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* 🌟 Mobil uyum */
+@media (max-width: 768px) {
+  .logo { width: 120px; top: 15px; left: 15px; }
+  .flag { width: 60px; top: 15px; }
+  .sponsor { width: 120px; top: 15px; right: 15px; }
+  .members { padding: 15px 30px; }
+  .members h3 { font-size: 1.2rem; }
+  .members li { font-size: 1rem; }
+  .follow-button { padding: 14px 40px; font-size: 1.3rem; bottom: 30px; }
+}
+
+@media (max-width: 480px) {
+  .logo { width: 100px; top: 10px; left: 10px; }
+  .flag { width: 50px; top: 10px; }
+  .sponsor { width: 100px; top: 10px; right: 10px; }
+  .members { padding: 10px 20px; }
+  .members h3 { font-size: 1rem; }
+  .members li { font-size: 0.9rem; }
+  .follow-button { padding: 12px 35px; font-size: 1.1rem; bottom: 25px; }
+}

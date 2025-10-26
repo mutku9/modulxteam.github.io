@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ModulX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Yükleniyor ekranı -->
+  <div id="loading">
+    <div class="loading-text">Yükleniyor...</div>
+  </div>
+
+  <!-- Arka plan videosu -->
+  <video autoplay muted loop id="bg-video">
+    <source src="assets/background.mp4" type="video/mp4">
+  </video>
+
+  <!-- Arka plan müziği -->
+  <audio loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Ana içerik -->
+  <div class="content">
+    <img src="assets/modulx-logo.jpeg" class="logo" alt="">
+    <img src="assets/turk-bayragi.jpg" class="flag" alt="">
+    <img src="assets/sponsor.png" class="sponsor" alt="">
+
+    <div class="members">
+      <h3>Aramızda Katılan Son 3 Kişi</h3>
+      <ul>
+        <li>@kullanici1</li>
+        <li>@kullanici2</li>
+        <li>@kullanici3</li>
+      </ul>
+    </div>
+
+    <button class="follow-button" onclick="window.open('https://www.instagram.com/modulxteam/', '_blank')">
+      Takip Et
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
